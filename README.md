@@ -100,3 +100,4 @@ Full admin panel can be developed with extra backend/frontend work or as a custo
 
 📇 Connect with the Developer
 LinkedIn: Ayman Elbatata
+https://www.linkedin.com/in/ayman-elbatata/
