@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AYMDating.API.props" />
+</Project>

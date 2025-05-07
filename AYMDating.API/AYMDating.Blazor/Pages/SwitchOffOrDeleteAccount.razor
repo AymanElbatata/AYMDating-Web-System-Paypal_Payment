@@ -1,0 +1,94 @@
+﻿@page "/switchOffOrDeleteAccount"
+
+@inherits Login
+@using AYMDating.API.DTO
+@using AYMDating.Blazor.Data.Helpers
+@using AYMDating.DAL.Entities
+@using Blazored.LocalStorage
+@using System.Net.Http.Headers
+@using System.ComponentModel.DataAnnotations
+@inject ILocalStorageService localStorage
+@inject NavigationManager Navigation
+@inject ApiServiceLogin _apiServiceLogin
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject AppState _AppState
+@inject IJSRuntime JS
+
+
+<PageTitle>SwitchOff/Delete Account</PageTitle>
+<div class="aym-paragraph">
+    <h3>SwitchOff/Delete Account</h3>
+
+    <div class="container text-center d-flex align-content-center justify-content-center col-md-12">
+        <EditForm Model="SwitchOrDeleteModel" OnValidSubmit="HandleRegister">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-control text-center w-75 mb-3">
+                <label for="SwitchOrDelete">Switch Or Delete:</label>
+                <InputSelect id="Gender" @bind-Value="SwitchOrDeleteModel.SwitchOrDelete" class="w-75">
+                    <option value="1">Switch Off</option>
+                    <option value="2">Delete Permanently</option>
+
+                </InputSelect>
+            </div>
+            <div class="form-control text-center w-75 mb-3">
+                <button class="btn btn-outline-secondary" type="submit">Submit</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private bool result = false;
+    private string Message;
+
+    private SwitchOrDeleteDTO SwitchOrDeleteModel = new SwitchOrDeleteDTO();
+    private async Task HandleRegister()
+    {
+        try
+        {
+            bool isConfirmed = await JS.InvokeAsync<bool>("showConfirmation", "Are you sure you want to do that?");
+            if (isConfirmed)
+            {
+                if (SwitchOrDeleteModel.SwitchOrDelete == 1)
+                {
+                    result = await _apiServiceLogin.SendSwitchedOffFromCurrentUser(SwitchOrDeleteModel);
+                    Message = "Your Account Has Been Switched off Successfully!.";
+                }
+                else
+                {
+                    result = await _apiServiceLogin.SendDeleteAccountFromCurrentUser(SwitchOrDeleteModel);
+                    Message = "Your Account Has Been Deleted Successfully!.";
+                }
+                if (result)
+                {
+                    await localStorage.RemoveItemAsync("AYMauthToken");
+                    _AppState.CurrentUserHistoryDTO = null;
+                    _AppState.isAuthenticated = false;
+                    StateHasChanged();
+
+                    Navigation.NavigateTo($"/login/{Message}.");
+                }
+                else
+                    await ShowAlert("Fatal Error, Please Contact us!");
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            // Handle login failure (e.g., show an error message)
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+
+    }
+}

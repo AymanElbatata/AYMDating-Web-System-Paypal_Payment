@@ -1,0 +1,81 @@
+﻿@page "/activateAccount/{Email}/{Code?}"
+
+@inherits Login
+@using AYMDating.API.DTO
+@using AYMDating.Blazor.Data.Helpers
+@using AYMDating.DAL.Entities
+@using System.Net.Http.Headers
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigation
+@inject ApiServiceLogin _apiServiceLogin
+
+<PageTitle>Activate Account</PageTitle>
+@* <h3>Activate Account</h3>
+ *@
+
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <EditForm Model="activationModel" OnValidSubmit="HandleActivation">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="text-center mb-1">
+            <label for="Email">Email:</label>
+            <InputText id="Email" @bind-Value="Email" type="email" />
+        </div>
+        <div class="text-center mb-1">
+            <label for="Code">Code:</label>
+            <InputText id="Code" @bind-Value="Code" type="text" />
+        </div>
+        <div class="text-center mb-1">
+            <button class="btn btn-outline-dark" type="submit">Activate</button>
+        </div>
+    </EditForm>
+</div>
+@code {
+
+    [Parameter]
+    [Required]
+    [EmailAddress]
+    public string? Email { get; set; }
+
+    [Parameter]
+    [MinLength(10)]
+    [MaxLength(10)]
+    public string? Code { get; set; }
+
+    private ActivateUserDTO activationModel = new ActivateUserDTO();
+
+    private async Task HandleActivation()
+    {
+        try
+        {
+            activationModel.Code = Code;
+            bool ActivateUserIsDone = await _apiServiceLogin.VerifyActivateUser(activationModel);
+            if (ActivateUserIsDone)
+            {
+                Navigation.NavigateTo("/login/Congratulation, Your Account Is Activated Now.");
+            }
+            else
+            {
+                await ShowAlert("Code Cannot be Empty!.");
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // Handle login failure (e.g., show an error message)
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        activationModel.Email = Email;
+    }
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        // if (firstRender)
+        // {
+        // }
+    }
+}

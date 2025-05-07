@@ -1,0 +1,66 @@
+﻿@page "/SwitchedOnAccountAgain"
+
+@inherits Login
+@using AYMDating.API.DTO
+@using AYMDating.Blazor.Data.Helpers
+@using AYMDating.DAL.Entities
+@using System.Net.Http.Headers
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigation
+@inject ApiServiceLogin _apiServiceLogin
+
+<PageTitle>Activate Account</PageTitle>
+@* <h3>Activate Account</h3>
+ *@
+
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <EditForm Model="activationModel" OnValidSubmit="HandleActivation">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="text-center mb-1">
+            <label for="Email">Email:</label>
+            <InputText id="Email" @bind-Value="activationModel.Email" type="email" />
+        </div>
+        <div class="text-center mb-1">
+            <button class="btn btn-outline-dark" type="submit">Try SwitchOn</button>
+        </div>
+    </EditForm>
+</div>
+@code {
+
+
+    private ActivateUserDTO activationModel = new ActivateUserDTO();
+
+    private async Task HandleActivation()
+    {
+        try
+        {
+            bool ActivateUserIsDone = await _apiServiceLogin.DoDeleteSwitchedOffUserByUserId(activationModel.Email);
+            if (ActivateUserIsDone)
+            {
+                Navigation.NavigateTo("/login/Congratulation, Your Account Is Switched On Again Now.");
+            }
+            else
+            {
+                await ShowAlert("There is No Account Is Match!.");
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // Handle login failure (e.g., show an error message)
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+    }
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        // if (firstRender)
+        // {
+        // }
+    }
+}

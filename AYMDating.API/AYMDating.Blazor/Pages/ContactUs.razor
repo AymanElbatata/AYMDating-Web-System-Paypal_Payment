@@ -1,0 +1,84 @@
+﻿@page "/contactUs"
+
+@inherits Login
+@using AYMDating.API.DTO
+@using AYMDating.Blazor.Data.Helpers
+@using AYMDating.DAL.Entities
+@using System.Net.Http.Headers
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigation
+@inject ApiServiceLogin _apiServiceLogin
+
+<PageTitle>Contact Us</PageTitle>
+@*     <h3>Contact Us</h3>
+ *@
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+        <EditForm Model="contactusModel" OnValidSubmit="Handlecontact">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="text-center mb-1">
+                <label for="Email">Name:</label>
+                <InputText id="contactusModel.Name" @bind-Value="contactusModel.Name" type="text" />
+            </div>
+            <div class="text-center mb-1">
+                <label for="Code">Email:</label>
+                <InputText id="contactusModel.Email" @bind-Value="contactusModel.Email" type="email" />
+            </div>
+            <div class="text-center mb-1">
+                <label for="Code">Message:</label>
+                <InputTextArea id="contactusModel.Message" @bind-Value="contactusModel.Message" class="textarea-custom" maxlength="600" type="text" />
+            </div>
+            <div class="text-center mb-1">
+                <button class="btn btn-outline-dark" type="submit">Send Message</button>
+            </div>
+        </EditForm>
+    </div>
+
+@if (isLoading)
+{
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+        <div class="loader text-center">
+            <div class="loader-text"> <img src="css/Images/Default/reload-loading-process-blue-round-512-3569811198.png" class="img-fluid" style="max-width: 80%;" /> </div>
+        </div>
+
+    </div>
+}
+@code {
+
+    protected bool isLoading = false;
+
+    private ContactUsDTO contactusModel = new ContactUsDTO();
+
+    private async Task Handlecontact()
+    {
+        try
+        {
+            isLoading = true;
+            bool ActivateUserIsDone = await _apiServiceLogin.SendMessageContactUsFromAnonymous(contactusModel);
+            if (ActivateUserIsDone)
+            {
+                contactusModel = new ContactUsDTO();
+                StateHasChanged();
+                await ShowAlert("Thanks, Your Message has been sent!.");
+            }
+            isLoading = false;
+        }
+        catch (Exception ex)
+        {
+            // Handle login failure (e.g., show an error message)
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        // if (firstRender)
+        // {
+        // }
+    }
+}

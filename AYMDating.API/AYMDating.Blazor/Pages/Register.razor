@@ -1,0 +1,117 @@
+﻿@page "/register"
+@inherits Login
+@using AYMDating.API.DTO
+@using AYMDating.Blazor.Data.Helpers
+@using AYMDating.DAL.Entities
+@using Blazored.LocalStorage
+@using System.Net.Http.Headers
+@using System.ComponentModel.DataAnnotations
+@inject ILocalStorageService localStorage
+@inject NavigationManager Navigation
+@inject ApiServiceLogin _apiServiceLogin
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject AppState _AppState
+
+<PageTitle>Register</PageTitle>
+@* <h3>Register</h3>
+ *@
+<div class="container text-center d-flex align-content-center justify-content-center">
+    <EditForm Model="registerModel" OnValidSubmit="HandleRegister">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="text-center mb-1">
+            <label for="registerModel.Email">Email:</label>
+            <InputText id="registerModel.Email" @bind-Value="registerModel.Email" type="email" />
+     </div>
+        <div class="text-center mb-1">
+            <label for="registerModel.Password">Password:</label>
+            <InputText id="registerModel.Password" @bind-Value="registerModel.Password" type="password" />
+     </div>
+        <div class="text-center mb-1">
+            <label for="registerModel.ConfirmPassword">ConfirmPassword:</label>
+            <InputText id="registerModel.ConfirmPassword" @bind-Value="registerModel.ConfirmPassword" type="password" />
+    </div>
+        <div class="text-center mb-1">
+            <label for="registerModel.PhoneNumber">PhoneNumber:</label>
+            <InputText id="registerModel.PhoneNumber" @bind-Value="registerModel.PhoneNumber" type="text" />
+     </div>
+@*         <div class="form-check text-center mb-1">
+            <InputCheckbox id="registerModel.RememberMe" @bind-Value="registerModel.RememberMe" class="form-check-input" />
+            <label for="registerModel.RememberMe">RememberMe:</label>
+    </div> *@
+        <div class="text-center mb-1">
+            <label for="registerModel.DateOfBirth">DateOfBirth:</label>
+            <InputDate id="registerModel.DateOfBirth" @bind-Value="registerModel.DateOfBirth" class="form-control" />
+     </div>
+        <div class="text-center mb-1">
+            <label for="registerModel.Gender">Gender:</label>
+            <InputSelect id="registerModel.Gender" @bind-Value="registerModel.Gender">
+                @foreach (var item in Genders)
+                {
+                    <option value="@item.ID">@item.Name</option>
+                }
+            </InputSelect>
+        </div>
+            <div class="text-center mb-1">
+            <button class="btn btn-outline-dark" type="submit">Register</button>
+        </div>
+</EditForm>
+</div>
+@code {
+    private List<Gender> Genders = new List<Gender>() { new Gender() { ID = 1, Name = "Male" }, new Gender() { ID = 2, Name = "Female" } };
+    private RegisterDTO registerModel = new RegisterDTO();
+
+    // public class TokenResponse
+    // {
+    //     public string AccessToken { get; set; }
+    // }
+
+    // public class RegisterModel
+    // {
+    //     [Required]
+    //     [EmailAddress]
+    //     public string Email { get; set; }
+    //     [Required]
+    //     [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\S)[a-zA-Z\S]{8,100}$", ErrorMessage = "Password Must contain one upper letter and one lower letter.")]
+    //     public string Password { get; set; }
+    //     [Required]
+    //     [Compare(nameof(Password), ErrorMessage = "Password Isn't Match")]
+    //     public string ConfirmPassword { get; set; }
+    //     [RegularExpression(@"^[0-9]{10,15}$", ErrorMessage = "10 up to 15 Number")]
+    //     public string PhoneNumber { get; set; }
+    //     public bool RememberMe { get; set; }
+
+    //     public DateTime DateOfBirth { get; set; }
+    //     [Required]
+    //     public int Gender { get; set; }
+    // }
+
+
+    private async Task HandleRegister()
+    {
+        try
+        {
+            ActivateUserDTO CreatedUser = await _apiServiceLogin.RegisterProcessAsync(registerModel);
+            if (CreatedUser!=null)
+            {
+                Navigation.NavigateTo($"/activateAccount/{CreatedUser.Email}/{""}");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle login failure (e.g., show an error message)
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        registerModel.DateOfBirth = new DateTime(1970,01,25) ;
+    }
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        
+    }
+
+}

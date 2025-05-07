@@ -1,0 +1,213 @@
+﻿@page "/userSearch"
+
+@inherits Users
+@using AYMDating.API.DTO
+@using AYMDating.Blazor.Data.Helpers
+@using AYMDating.DAL.Entities
+@inject NavigationManager Navigation
+@inject ApiServiceLogin _apiServiceLogin
+@inject AppState _AppState
+
+<PageTitle>User Search</PageTitle>
+
+@if (_AppState.isAuthenticated)
+{
+    <div class="m-auto text-center">
+        <h4>Search</h4>
+        <br />
+    </div>
+
+    @if (forecasts == null || Countries == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else if (UserSearchIds.Count == 0)
+    {
+        <div class="container">
+            <p><em>No Users</em></p>
+
+            <EditForm Model="UserSearchDTO" OnValidSubmit="HandleSearch">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-control w-25">
+                    <label for="UserSearchDTO.AgeFrom">Age From:</label>
+                    <InputNumber id="UserSearchDTO.AgeFrom" @bind-Value="UserSearchDTO.AgeFrom" />
+                </div>
+                <div class="form-control w-25">
+                    <label for="UserSearchDTO.AgeTo">Age To:</label>
+                    <InputNumber id="UserSearchDTO.AgeTo" @bind-Value="UserSearchDTO.AgeTo" />
+                </div>
+                <div class="form-control w-25">
+                    <label for="sexDropdown">I'm':</label>
+                    <InputSelect id="sexDropdown" @bind-Value="UserSearchDTO.IamGender">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </InputSelect>
+                </div>
+                <div class="form-control w-25">
+                    <label for="sexDropdown">I want':</label>
+                    <InputSelect id="sexDropdown" @bind-Value="UserSearchDTO.IwantGender">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </InputSelect>
+                </div>
+                <div class="form-control w-50">
+                    <label for="countryDropdown">Country:</label>
+                    <InputSelect id="countryDropdown" @bind-Value="UserSearchDTO.Country">
+                        @foreach (var country in Countries)
+                        {
+                            <option value="@country.ID">@country.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="form-control w-25">
+                    <label for="UserSearchDTO.AgeFrom">Has Photo:</label>
+                    <InputCheckbox id="UserSearchDTO.UserHasImage" @bind-Value="UserSearchDTO.UserHasImage" />
+                </div>
+
+                <button type="submit">Search</button>
+            </EditForm>
+            <br />
+            <br />
+        </div>
+   }
+    else
+    {
+        <div class="container">
+
+            <EditForm Model="UserSearchDTO" OnValidSubmit="HandleSearch">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-control w-25">
+                    <label for="UserSearchDTO.AgeFrom">Age From:</label>
+                    <InputNumber id="UserSearchDTO.AgeFrom" @bind-Value="UserSearchDTO.AgeFrom" />
+                </div>
+                <div class="form-control w-25">
+                    <label for="UserSearchDTO.AgeTo">Age To:</label>
+                    <InputNumber id="UserSearchDTO.AgeTo" @bind-Value="UserSearchDTO.AgeTo" />
+                </div>
+                <div class="form-control w-25">
+                    <label for="sexDropdown">I'm':</label>
+                    <InputSelect id="sexDropdown" @bind-Value="UserSearchDTO.IamGender">
+                        @foreach (var gender in Genders)
+                        {
+                            <option value="@gender.ID">@gender.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="form-control w-25">
+                    <label for="sexDropdown">I want':</label>
+                    <InputSelect id="sexDropdown" @bind-Value="UserSearchDTO.IwantGender">
+                        @foreach (var gender in Genders)
+                        {
+                            <option value="@gender.ID">@gender.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+                <div class="form-control w-50">
+                    <label for="countryDropdown">Country:</label>
+                    <InputSelect id="countryDropdown" @bind-Value="UserSearchDTO.Country">
+                        @foreach (var country in Countries)
+                        {
+                            <option value="@country.ID">@country.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="form-control w-25">
+                    <label for="UserSearchDTO.AgeFrom">Has Photo:</label>
+                    <InputCheckbox id="UserSearchDTO.UserHasImage" @bind-Value="UserSearchDTO.UserHasImage" />
+                </div>
+
+                <button type="submit">Search</button>
+            </EditForm>
+            <br />
+            <br />
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                @foreach (var forecast in forecasts.Where(f => UserSearchIds.Contains(f.AppUserId)))
+                {
+                    <div class="col-md-3 text-center p-2 fs-6">
+                        <div class="border border-black rounded" @onclick="() => NavigateToUser(forecast.AppUser.UserName)">
+                            <div class="p-1">
+                                <img src="@GetImage(forecast.MainImage,(int)forecast.GenderId)" title="@forecast.AppUser.UserName" alt="Image" class="img-fluid rounded" />
+                            </div>
+                            <div>
+                                @forecast.AppUser?.UserName |  <img src="@GetpackageImage((int)forecast.UserPackage.PackageId)" title="@forecast.UserPackage.Package.Name" class="img-fluid" style="max-width: 11%;" />
+
+                            </div>
+                            <div>
+                                @forecast.Age | @forecast.Country?.Name | @forecast.City
+                            </div>
+                            <div>
+                                Seeking: @GetGender((int)forecast.GenderId) @forecast.SearchAgeFrom - @forecast.SearchAgeTo
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                I'm Online &ensp; <img src="@GetUserOnlineLogo(forecast.IsCurrentUserOnline)" alt="@GetAltText(forecast.IsCurrentUserOnline)" class="img-fluid" style="max-width: 7%;" /> &ensp; <img src=@GetUserVerifiedLogo(forecast.IsCurrentUserVerified) title="@(forecast.IsCurrentUserVerified?"Verified":"Unverified")" alt="Verified" class="img-fluid" style="max-width: 7%;" />
+                            </div>
+                            <div>
+                                Joined Since:  @GetUserSinceDateOfJoin(forecast.AppUser.DateOfJoin)
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between p-3">
+                            <img src="@GetUserIsLiked(forecast.IsLikedFromCurrentUser)" alt="Add Like" title="Add Like to this User" class="img-fluid" style="max-width: 20%;" @onclick="() => AddRemoveLike(forecast.AppUserId,forecast.IsLikedFromCurrentUser)" /> || <img src="@GetUserIsFavorite(forecast.IsFavoriteFromCurrentUser)" alt="Add Favorite" title="Add this User To Your Favorites" class="img-fluid" style="max-width: 20%;" @onclick="() => AddRemoveFavorite(forecast.AppUserId,forecast.IsFavoriteFromCurrentUser)" /> || <img src="css/Images/Default/message-icon.png" alt="Messaging" title="Message this User" class="img-fluid" style="max-width: 20%;" @onclick="() => GoToChatWith(forecast.AppUser.UserName, forecast.AppUserId)" /> || <img src="@GetUserIsBlocked(forecast.IsBlockedFromCurrentUser)" alt="Blocking" title="Block Or Unblock This User" class="img-fluid" style="max-width: 20%;" @onclick="() => AddRemoveBlocking(forecast.AppUserId,forecast.IsBlockedFromCurrentUser)" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+else
+    UnAuthorizedUser();
+
+
+@code {
+    protected List<string> UserSearchIds = new List<string>();
+    private IReadOnlyList<Country> Countries;
+    private IReadOnlyList<Gender> Genders;
+    private UserMainSearchDTO UserSearchDTO = new UserMainSearchDTO() { AgeFrom =20, AgeTo=50,Country =1,IamGender=1, IwantGender=2,UserHasImage=false};
+
+    private async Task HandleSearch()
+    {
+        try
+        {
+            UserSearchIds = await _apiServiceLogin.GetUserSearchIdsUsersForCurrentUser(UserSearchDTO);
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            // Handle login failure (e.g., show an error message)
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            forecasts = _AppState.AllUsers;
+            Countries = await _apiServiceLogin.GetAllCountries();
+            Genders = await _apiServiceLogin.GetAllGenders();
+        }
+        catch (Exception ex)
+        {
+            GoToWrongArea();
+        }
+    }
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        // if (firstRender)
+        // {
+        //     StateHasChanged();
+        // }
+
+    }
+
+}

@@ -1,0 +1,461 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\AYMDating.Blazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AYMDating.Blazor.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\css\\lightbox.css",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\css\\lightbox.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\css\\lightbox.min.css",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\css\\lightbox.min.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\images\\Thumbs.db",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\images\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\images\\close.png",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\images\\close.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\images\\loading.gif"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\images\\next.png",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\images\\next.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\images\\prev.png",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\images\\prev.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\Lightbox\\dist\\js\\lightbox-plus-jquery.min.js",
+      "PackagePath": "staticwebassets\\Lightbox\\dist\\js\\lightbox-plus-jquery.min.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\Blocking1.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\Blocking1.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\Blocking2.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\Blocking2.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\BoyPhoto1.jpg",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\BoyPhoto1.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\Community-1138-3145432481.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\Community-1138-3145432481.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\Community-2455494865.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\Community-2455494865.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\GirlPhoto1.jpg",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\GirlPhoto1.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\GirlPhoto1.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\GirlPhoto1.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\LikeHeart01.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\LikeHeart01.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\LikeHeart02.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\LikeHeart02.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\User1.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\User1.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\User2.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\User2.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\User3.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\User3.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\User4.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\User4.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\User5.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\User5.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\UserNotVerified.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\UserNotVerified.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\UserOffline.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\UserOffline.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\UserOnline.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\UserOnline.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\UserVerified.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\UserVerified.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\aymlogo.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\aymlogo.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\complaintsUserIcon.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\complaintsUserIcon.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\favorite01.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\favorite01.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\favorite02.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\favorite02.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\logo.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\logo.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\love-facebook-cover-170149232.jpg",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\love-facebook-cover-170149232.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\message-icon.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\message-icon.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\online_dating_apps-4258776969.jpg",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\online_dating_apps-4258776969.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\reload-loading-process-blue-round-512-3569811198.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\reload-loading-process-blue-round-512-3569811198.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\tmpFeaturedImagelifestyle_onlinedating-400-2934769785.jpg",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\tmpFeaturedImagelifestyle_onlinedating-400-2934769785.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\Images\\Default\\user-icon-2400.png",
+      "PackagePath": "staticwebassets\\css\\Images\\Default\\user-icon-2400.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\lightbox.min.css",
+      "PackagePath": "staticwebassets\\css\\lightbox.min.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\html5up-dimension\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\README.txt",
+      "PackagePath": "staticwebassets\\html5up-dimension\\README.txt"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\css\\main.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\css\\noscript.css",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\css\\noscript.css"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\js\\breakpoints.min.js",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\js\\breakpoints.min.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\js\\browser.min.js",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\js\\browser.min.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\js\\util.js",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\js\\util.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\base\\_page.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\base\\_page.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\base\\_reset.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\base\\_reset.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\base\\_typography.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\base\\_typography.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_actions.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_actions.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_box.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_box.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_button.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_button.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_form.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_form.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_icon.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_icon.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_icons.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_icons.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_image.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_image.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_list.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_list.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\components\\_table.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\components\\_table.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\layout\\_bg.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\layout\\_bg.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\layout\\_footer.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\layout\\_header.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\layout\\_header.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\layout\\_main.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\layout\\_main.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\layout\\_wrapper.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\layout\\_wrapper.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\libs\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\libs\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\libs\\_functions.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\libs\\_functions.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\libs\\_mixins.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\libs\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\libs\\_vars.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\libs\\_vars.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\libs\\_vendor.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\libs\\_vendor.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\main.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\main.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\sass\\noscript.scss",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\sass\\noscript.scss"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\assets\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\html5up-dimension\\assets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\html5up-dimension\\images\\bg.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\images\\overlay.png",
+      "PackagePath": "staticwebassets\\html5up-dimension\\images\\overlay.png"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\images\\pic01.jpg",
+      "PackagePath": "staticwebassets\\html5up-dimension\\images\\pic01.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\images\\pic02.jpg",
+      "PackagePath": "staticwebassets\\html5up-dimension\\images\\pic02.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\images\\pic03.jpg",
+      "PackagePath": "staticwebassets\\html5up-dimension\\images\\pic03.jpg"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\html5up-dimension\\index.html",
+      "PackagePath": "staticwebassets\\html5up-dimension\\index.html"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\js\\interop.js",
+      "PackagePath": "staticwebassets\\js\\interop.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\js\\lightbox.min.js",
+      "PackagePath": "staticwebassets\\js\\lightbox.min.js"
+    },
+    {
+      "Id": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.Blazor\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.AYMDating.Blazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.AYMDating.Blazor.props",
+      "PackagePath": "build\\AYMDating.Blazor.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.AYMDating.Blazor.props",
+      "PackagePath": "buildMultiTargeting\\AYMDating.Blazor.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.AYMDating.Blazor.props",
+      "PackagePath": "buildTransitive\\AYMDating.Blazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

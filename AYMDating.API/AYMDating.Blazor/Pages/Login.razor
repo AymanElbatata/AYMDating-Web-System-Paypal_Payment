@@ -1,0 +1,271 @@
+﻿@page "/login/{Message?}"
+@inherits MainLayout
+@using AYMDating.API.DTO
+@using AYMDating.Blazor.Data.Helpers
+@using Blazored.LocalStorage
+@using System.Net.Http.Headers
+@using System.ComponentModel.DataAnnotations
+@inject ILocalStorageService localStorage
+@inject NavigationManager Navigation
+@inject ApiServiceLogin _apiServiceLogin
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject AppState _AppState
+@inject JsInteropService JsInterop
+
+
+<PageTitle>Login</PageTitle>
+@* <h3>Login</h3>
+ *@
+@if (!string.IsNullOrEmpty(Message))
+{
+    if (Message.Contains("Error"))
+    {
+        <p style="color:red">@Message</p>
+    }
+    else
+    {
+        <p style="color:green">@Message</p>
+    }
+}    
+
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <EditForm Model="loginModel" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+        <div class="text-center mb-1">
+            <label for="loginModel.Email">Email:</label>
+            <InputText id="Email" @bind-Value="loginModel.Email" type="email" />
+        </div>
+        <div class="text-center mb-1">
+            <label for="loginModel.Password">Password:</label>
+            <InputText id="Password" @bind-Value="loginModel.Password" type="password" />
+        </div>
+        <div class="form-check text-center mb-1">
+            <InputCheckbox id="loginModel.RememberMe" @bind-Value="loginModel.RememberMe" class="form-check-input" />
+            <label for="loginModel.RememberMe">RememberMe:</label>
+    </div>
+        <div class="text-center mb-1">
+            <button class="btn btn-outline-dark" type="submit">Login</button>
+        </div>
+    </EditForm>
+    @if (_isHuman)
+    {
+        <p>Thank you for verifying!</p>
+    }
+    else
+    {
+        <div class="mt-1 mb-1 d-flex flex-column border border-black rounded justify-content-between align-items-center">
+        <p>Solve the following problem to prove you're not a robot:</p>
+        <p>@_num1 + @_num2 = ?</p>
+        <input @bind="_userAnswer" placeholder="Your Answer" class="mb-1" type="text" />
+        <button class="btn btn-outline-secondary" @onclick="VerifyCaptcha">Verify</button>
+        </div>
+    }
+</div>
+<ul style="list-style-type:none">
+ <li><NavLink href="forgotPassword">Forgot Password</NavLink></li>
+ <li><NavLink href="activateAcAgain">Activation</NavLink></li>
+    <li><NavLink href="SwitchedOnAccountAgain">Switch On Again</NavLink></li>
+</ul>
+@if (isLoading)
+{
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+        <div class="loader text-center">
+            <div class="loader-text"> <img src="css/Images/Default/reload-loading-process-blue-round-512-3569811198.png" class="img-fluid" style="max-width: 80%;" /> </div>
+        </div>
+
+   </div>
+}
+
+@code {
+    [Parameter]
+    public string? Message { get; set; }
+
+    private int _num1;
+    private int _num2;
+    private string _userAnswer;
+    private bool _isHuman;
+
+    protected override void OnInitialized()
+    {
+        GenerateCaptcha();
+    }
+
+    private void GenerateCaptcha()
+    {
+        var random = new Random();
+        _num1 = random.Next(1, 10);
+        _num2 = random.Next(1, 10);
+    }
+
+    private void VerifyCaptcha()
+    {
+        int correctAnswer = _num1 + _num2;
+        _isHuman = _userAnswer == correctAnswer.ToString();
+    }
+
+
+
+    protected bool isLoading = false;
+
+    protected void UnAuthorizedUser()
+    {
+        try
+        {
+            Navigation.NavigateTo("/login");
+        }
+        catch (NavigationException ex)
+        {
+            ShowAlert("Error: " + ex.Message);
+        }
+    }
+
+    protected void GoToWrongArea()
+    {
+        try
+        {
+            Navigation.NavigateTo("/");
+        }
+        catch (NavigationException ex)
+        {
+            ShowAlert("Error: " + ex.Message);
+        }
+    }
+
+    protected async Task ShowAlert(string message)
+    {
+        await JsInterop.ShowAlert(message);
+    }
+
+    private LoginModel loginModel = new LoginModel();
+
+    // public class TokenResponse
+    // {
+    //     public string AccessToken { get; set; }
+    // }
+
+    public class LoginModel
+    {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+        [Required]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\S)[a-zA-Z\S]{8,100}$", ErrorMessage = "Password Must contain one upper letter and one lower letter.")]
+        public string Password { get; set; }
+        public bool RememberMe { get; set; }
+    }
+
+
+
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            if (_isHuman)
+            {
+                isLoading = true;
+                // _ = StartCountdown();
+                var userDTO = await _apiServiceLogin.LoginProcessAsync(loginModel);
+                if (userDTO.Data.Email == null)
+                    await ShowAlert(userDTO.Type + ", No Match User, Check your data and Please try again!");
+
+                else if (userDTO.Data.Email != null && !userDTO.Data.IsActivated)
+                    Navigation.NavigateTo($"/activateAccount/{loginModel.Email}");
+
+                else if (userDTO.Data.Email != null && userDTO.Data.IsSwitchedOff)
+                    Navigation.NavigateTo("/reActivateSwitchedOffAccount");
+
+                else if (!string.IsNullOrEmpty(userDTO.Data.Token))
+                {
+                    await localStorage.SetItemAsync("AYMauthToken", userDTO.Data.Token);
+                    await GetCurrentUser();
+                    Navigation.NavigateTo("/users");
+                }
+                isLoading = false;
+            }
+            else
+                await ShowAlert("Wrong Captcha");
+
+            
+        }
+        catch (Exception ex)
+        {
+            // Handle login failure (e.g., show an error message)
+        }
+    }
+
+    // protected async Task IfUserOnline()
+    // {
+    //     var token = await localStorage.GetItemAsync<string>("AYMauthToken");
+
+    //     if (!string.IsNullOrEmpty(token))
+    //     {
+    //         // var userDTO = await _apiServiceLogin.AddTokenForUserFromLocalStorage();
+    //         // await GetCurrentUser(userDTO);
+    //         // Navigation.NavigateTo("/fetchdata");
+
+    //          // Navigation.NavigateTo("/logOut");
+
+    //     }
+    // }
+    protected string GetpackageImage(int package)
+    {
+        if (package == 1)
+            return "css/Images/Default/User1.png";
+        if (package == 2)
+            return "css/Images/Default/User2.png";
+        if (package == 3)
+            return "css/Images/Default/User3.png";
+        if (package == 4)
+            return "css/Images/Default/User4.png";
+        if (package == 5)
+            return "css/Images/Default/User5.png";
+        return string.Empty;
+
+    }
+    public async Task GetCurrentUser()
+    {
+        try
+        {
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+            _AppState.isAuthenticated = true;
+
+            _AppState.CurrentUserHistoryDTO = await _apiServiceLogin.GetHistoryWithMainImagesForCurrentUser();
+            _AppState.AllUsers = await _apiServiceLogin.GetUserHistoriesWithMainImagesForAll();
+        }
+        catch (Exception ex)
+        {
+            
+        }
+        // if (_AppState.AllUsers == null)
+        // {
+        //     var x = 10;
+        // }
+
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        // var token = await localStorage.GetItemAsync<string>("AYMauthToken");
+        // if (!string.IsNullOrEmpty(token))
+        // {
+        //     var request = new HttpRequestMessage(HttpMethod.Get, "/Account/Login");
+        //     request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+        // }
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        // if (firstRender)
+        // {
+        //     await IfUserOnline();
+        // }
+        // await IfUserOnline();
+
+    }
+
+
+
+}

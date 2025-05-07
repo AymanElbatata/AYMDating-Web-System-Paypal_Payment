@@ -1,0 +1,54 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@namespace AYMDating.Blazor.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <title>Find Your Perfect Partner | AYMdating - Love & Marriage</title>
+    <meta name="description" content="AYMdating is the premier online dating site helping singles find love and marriage. Join today and connect with like-minded individuals from all over the world.">
+    <meta name="keywords" content="dating, marriage, online dating, love, relationships, partner, singles, AYMdating, international dating">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="https://www.facebook.com/SalmaSoftOfficial">
+    <link rel="canonical" href="https://www.aymdating.com/">
+    <meta property="og:title" content="Find Your Perfect Partner | AYMdating - Love & Marriage">
+    <meta property="og:description" content="AYMdating is the premier online dating site helping singles find love and marriage. Join today and connect with like-minded individuals from all over the world.">
+    <meta property="og:url" content="https://www.aymdating.com/">
+    <meta property="og:image" content="https://aymdating.runasp.net/css/Images/Default/online_dating_apps-4258776969.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Find Your Perfect Partner | AYMdating - Love & Marriage">
+    <meta name="twitter:description" content="AYMdating is the premier online dating site helping singles find love and marriage.">
+    <meta name="twitter:image" content="https://aymdating.runasp.net/css/Images/Default/online_dating_apps-4258776969.jpg">
+
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="AYMDating.Blazor.styles.css" rel="stylesheet" />
+
+    <script src="js/interop.js"></script>
+    <script src="~/js/site.js"></script>
+
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    @RenderBody()
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
