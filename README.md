@@ -68,11 +68,6 @@ Live Notifications
 
 Inspired by InternationalCupid
 
-Source Code:
-
-Included in a .RAR file
-
-Password: 19777
 
 Live Demo:
 
