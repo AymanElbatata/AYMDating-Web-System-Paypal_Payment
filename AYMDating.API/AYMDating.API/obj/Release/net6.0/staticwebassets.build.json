@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7+rr5lIPz8Rp7oiVGivKf0waB2h1KRXGtdfxQ32DvFk=",
+  "Hash": "zqZj/g977+bR9NXCHDLc0eX3Y4eWz/6if9ekkurv6wg=",
   "Source": "AYMDating.API",
   "BasePath": "_content/AYMDating.API",
   "Mode": "Default",
@@ -15,5 +15,6 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

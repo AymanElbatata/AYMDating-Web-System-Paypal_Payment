@@ -1,4 +1,7 @@
 ﻿@page "/userDetails/{Username}"
+
+@if (_AppState.isAuthenticated)
+{
 @inherits Users
 
 @using AYMDating.API.DTO
@@ -13,10 +16,6 @@
 
 <link href="Lightbox/dist/css/lightbox.min.css" rel="stylesheet" />
 <script src="Lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
-
-
-@if (_AppState.isAuthenticated)
-{
 
 
 @if (userHistoryDTO == null)
@@ -212,9 +211,6 @@ else
         </div>
     </div>
 }
-}
-else
-UnAuthorizedUser();
 
 
 
@@ -261,5 +257,8 @@ UnAuthorizedUser();
 
     }
 
-
 }
+
+    }
+    else
+        UnAuthorizedUser();

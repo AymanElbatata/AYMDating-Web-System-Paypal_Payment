@@ -280,3 +280,8 @@ D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.Blazor\obj\Release\net6
 D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.Blazor\obj\Release\net6.0\AYMDating.Blazor.pdb
 D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.Blazor\obj\Release\net6.0\AYMDating.Blazor.genruntimeconfig.cache
 D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.Blazor\obj\Release\net6.0\ref\AYMDating.Blazor.dll
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.Blazor\bin\Release\net6.0\AYMDating.API.staticwebassets.endpoints.json
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.Blazor\bin\Release\net6.0\AYMDating.Blazor.staticwebassets.endpoints.json
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.Blazor\obj\Release\net6.0\staticwebassets.build.endpoints.json
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.Blazor\obj\Release\net6.0\staticwebassets\msbuild.AYMDating.Blazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.Blazor\obj\Release\net6.0\staticwebassets.upToDateCheck.txt

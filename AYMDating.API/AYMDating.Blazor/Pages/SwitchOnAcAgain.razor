@@ -9,9 +9,8 @@
 @inject NavigationManager Navigation
 @inject ApiServiceLogin _apiServiceLogin
 
-<PageTitle>Activate Account</PageTitle>
-@* <h3>Activate Account</h3>
- *@
+@* <PageTitle>Activate Account</PageTitle>
+
 
 <div class="container d-flex flex-column align-items-center justify-content-center">
     <EditForm Model="activationModel" OnValidSubmit="HandleActivation">
@@ -25,7 +24,205 @@
             <button class="btn btn-outline-dark" type="submit">Try SwitchOn</button>
         </div>
     </EditForm>
+</div> *@
+
+<PageTitle>Activate Account</PageTitle>
+
+<style>
+    :root {
+        --primary-color: #6c5ce7;
+        --primary-hover: #5649d2;
+        --secondary-color: #a29bfe;
+        --light-color: #f8f9fa;
+        --dark-color: #343a40;
+        --border-radius: 12px;
+        --box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+        --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .activation-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    }
+
+    .activation-card {
+        width: 100%;
+        max-width: 500px;
+        padding: 3rem;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .activation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+    .activation-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .activation-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .activation-title {
+        color: var(--dark-color);
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .activation-subtitle {
+        color: #6c757d;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .activation-form {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+        color: var(--dark-color);
+        font-size: 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        border: 2px solid #e9ecef;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        transition: var(--transition);
+    }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+        }
+
+    .activation-btn {
+        width: 100%;
+        padding: 1rem;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+        .activation-btn:hover {
+            background: linear-gradient(90deg, var(--primary-hover), var(--primary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        .activation-btn:active {
+            transform: translateY(0);
+        }
+
+    .validation-message {
+        color: #dc3545;
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+        text-align: left;
+    }
+
+    .validation-summary {
+        color: #dc3545;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    .footer-text {
+        margin-top: 2rem;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    @@media (max-width: 576px) {
+        .activation-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .activation-title {
+            font-size: 1.75rem;
+        }
+    }
+</style>
+
+<div class="activation-container">
+    <div class="activation-card">
+        <div class="activation-header">
+            <div class="activation-icon">
+                <i class="fas fa-power-off"></i>
+            </div>
+            <h1 class="activation-title">Switch On Your Account</h1>
+            <p class="activation-subtitle">Enter your email address to receive your activation link</p>
+        </div>
+
+        <EditForm Model="activationModel" OnValidSubmit="HandleActivation" class="activation-form">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="validation-summary" />
+
+            <div class="form-group">
+                <label for="Email" class="form-label">Email Address</label>
+                <InputText id="Email" @bind-Value="activationModel.Email" class="form-control"
+                           placeholder="Enter your registered email" />
+                <ValidationMessage For="@(() => activationModel.Email)" class="validation-message" />
+            </div>
+
+            <button type="submit" class="activation-btn">
+                <i class="fas fa-paper-plane"></i> Try SwitchOn
+            </button>
+        </EditForm>
+
+        <p class="footer-text">
+            Already activated? <a href="/login">Sign in here</a>
+        </p>
+    </div>
 </div>
+
+
 @code {
 
 

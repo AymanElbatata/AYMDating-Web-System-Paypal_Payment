@@ -1,5 +1,6 @@
 ﻿@page "/userMatch"
-
+@if (_AppState.isAuthenticated)
+{
 @inherits Users
 @using AYMDating.API.DTO
 @using AYMDating.Blazor.Data.Helpers
@@ -9,8 +10,7 @@
 
 <PageTitle>User Match</PageTitle>
 
-@if (_AppState.isAuthenticated)
-{
+
     <div class="m-auto text-center">
         <h4>Matches</h4>
         <br />
@@ -61,9 +61,6 @@
             </div>
         </div>
     }
-}
-else
-    UnAuthorizedUser();
 
 
 @code {
@@ -92,3 +89,7 @@ else
     }
 
 }
+
+}
+else
+    UnAuthorizedUser();

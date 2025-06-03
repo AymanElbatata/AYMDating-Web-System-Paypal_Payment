@@ -1,4 +1,6 @@
 ﻿@page "/users"
+@if (_AppState.isAuthenticated)
+{
 @inherits Login
 @using AYMDating.API.DTO
 @using AYMDating.API.Helpers
@@ -9,8 +11,7 @@
 
 <PageTitle>Users</PageTitle>
 
-@if (_AppState.isAuthenticated)
-{
+
     <h1>Users</h1>
     <br />
 
@@ -58,9 +59,6 @@
             </div>
         </div>
     }
-}
-else
-    UnAuthorizedUser();
 
 
 
@@ -272,6 +270,8 @@ else
     }
 
 
-
+}
 
 }
+else
+    UnAuthorizedUser();

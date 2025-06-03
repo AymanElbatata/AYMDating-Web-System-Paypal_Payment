@@ -1,4 +1,6 @@
 ﻿@page "/userMessages"
+@if (_AppState.isAuthenticated)
+{
 @inherits Users
 
 @using AYMDating.API.DTO
@@ -9,8 +11,7 @@
 <PageTitle>User Messages</PageTitle>
 
 
-@if (_AppState.isAuthenticated)
-{
+
     <div class="m-auto text-center">
         <h4>Members Sent you Messages!</h4>
         <br />
@@ -66,9 +67,7 @@
             </div>
         </div>
     }
-}
-else
-    UnAuthorizedUser();
+
 
 
 
@@ -99,3 +98,7 @@ else
         // }
     }
 }
+
+}
+else
+    UnAuthorizedUser();

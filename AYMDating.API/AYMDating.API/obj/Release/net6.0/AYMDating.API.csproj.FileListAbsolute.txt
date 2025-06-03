@@ -216,3 +216,7 @@ D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.API\obj\Release\net6.0\
 D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.API\obj\Release\net6.0\AYMDating.API.pdb
 D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.API\obj\Release\net6.0\AYMDating.API.genruntimeconfig.cache
 D:\AYM Programming\AYMDating.API\AYMDating.API\AYMDating.API\obj\Release\net6.0\ref\AYMDating.API.dll
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.API\bin\Release\net6.0\AYMDating.API.staticwebassets.endpoints.json
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.API\obj\Release\net6.0\staticwebassets.build.endpoints.json
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.API\obj\Release\net6.0\staticwebassets\msbuild.AYMDating.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\AYM Programming\Prog&Files\AYMDating.API\AYMDating.API\AYMDating.API\obj\Release\net6.0\staticwebassets.upToDateCheck.txt

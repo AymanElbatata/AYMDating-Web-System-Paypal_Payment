@@ -1,4 +1,6 @@
 ﻿@page "/memberShips"
+@if (_AppState.isAuthenticated)
+{
 @inherits Login
 
 @using AYMDating.API.DTO
@@ -288,3 +290,8 @@
     }
 
 }
+
+
+}
+else
+    UnAuthorizedUser();

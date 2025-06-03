@@ -1,11 +1,20 @@
 {
   "Version": 1,
-  "Hash": "XLTAD37nZK6gU+lt2PQBoGgzGajkvsqmQ8VhfCLVjfY=",
+  "Hash": "5crgKVhhvFIyv5AtQCxruR4bF3OfTkt93grdFD3sOzw=",
   "Source": "AYMDating.API",
   "BasePath": "_content/AYMDating.API",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "AYMDating.API\\wwwroot",
+      "Source": "AYMDating.API",
+      "ContentRoot": "D:\\AYM Programming\\Prog&Files\\AYMDating.API\\AYMDating.API\\AYMDating.API\\wwwroot\\",
+      "BasePath": "_content/AYMDating.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
 }
