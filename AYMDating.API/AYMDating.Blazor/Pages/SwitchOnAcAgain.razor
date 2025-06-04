@@ -188,6 +188,90 @@
             font-size: 1.75rem;
         }
     }
+
+    .human-verification {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #4b6cb7;
+    }
+
+    .verification-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+        .verification-header h4 {
+            margin: 0 0 0 10px;
+            color: #495057;
+        }
+
+        .verification-header i {
+            font-size: 1.5rem;
+            color: #4b6cb7;
+        }
+
+    .math-problem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+        .math-problem span {
+            margin-right: 1rem;
+        }
+
+    .math-answer {
+        width: 100px;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+        border: 2px solid #dee2e6;
+        border-radius: 4px;
+    }
+
+    .btn-verify {
+        width: 100%;
+        padding: 0.75rem;
+        background: #4b6cb7;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .btn-verify:hover {
+            background: #3a5aa0;
+        }
+
+        .btn-verify i {
+            margin-right: 8px;
+        }
+
+    /* Success message */
+    .verification-success {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: #d4edda;
+        color: #155724;
+        border-radius: 6px;
+    }
+
+        .verification-success i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
 </style>
 
 <div class="activation-container">
@@ -210,7 +294,33 @@
                            placeholder="Enter your registered email" />
                 <ValidationMessage For="@(() => activationModel.Email)" class="validation-message" />
             </div>
+            @if (_isHuman)
+            {
+                <div class="verification-success">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Verification complete! You may proceed.</span>
+                </div>
+            }
+            else
+            {
+                <div class="human-verification">
+                    <div class="verification-header">
+                        <i class="bi bi-robot"></i>
+                        <h4>Human Verification</h4>
+                    </div>
+                    <p>Please solve this simple math problem to continue:</p>
 
+                    <div class="math-problem">
+                        <span>@_num1 + @_num2 =</span>
+                        <input @bind="_userAnswer" placeholder="?"
+                               class="math-answer" type="number" />
+                    </div>
+
+                    <button type="button" class="btn-verify" @onclick="VerifyCaptcha">
+                        <i class="bi bi-shield-check"></i> Verify
+                    </button>
+                </div>
+            }
             <button type="submit" class="activation-btn">
                 <i class="fas fa-paper-plane"></i> Try SwitchOn
             </button>
@@ -225,8 +335,30 @@
 
 @code {
 
-
+    private int _num1;
+    private int _num2;
+    private string _userAnswer;
+    private bool _isHuman;
     private ActivateUserDTO activationModel = new ActivateUserDTO();
+
+    protected override void OnInitialized()
+    {
+        GenerateCaptcha();
+    }
+
+    private void GenerateCaptcha()
+    {
+        var random = new Random();
+        _num1 = random.Next(1, 10);
+        _num2 = random.Next(1, 10);
+    }
+
+    private void VerifyCaptcha()
+    {
+        int correctAnswer = _num1 + _num2;
+        _isHuman = _userAnswer == correctAnswer.ToString();
+    }
+
 
     private async Task HandleActivation()
     {

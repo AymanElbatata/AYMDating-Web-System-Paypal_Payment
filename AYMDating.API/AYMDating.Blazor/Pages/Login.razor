@@ -1187,7 +1187,7 @@
                     Navigation.NavigateTo($"/activateAccount/{loginModel.Email}");
 
                 else if (userDTO.Data.Email != null && userDTO.Data.IsSwitchedOff)
-                    Navigation.NavigateTo("/reActivateSwitchedOffAccount");
+                    Navigation.NavigateTo("/SwitchedOnAccountAgain");
 
                 else if (!string.IsNullOrEmpty(userDTO.Data.Token))
                 {
