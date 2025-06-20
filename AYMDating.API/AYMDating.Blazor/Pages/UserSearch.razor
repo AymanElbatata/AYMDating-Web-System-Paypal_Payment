@@ -326,8 +326,8 @@ else
                 @foreach (var forecast in forecasts.Where(f => UserSearchIds.Contains(f.AppUserId)))
                 {
                     <div class="col">
-                        <div class="card h-100 shadow-sm user-card" @onclick="() => NavigateToUser(forecast.AppUser.UserName)">
-                            <div class="position-relative">
+                        <div class="card h-100 shadow-sm user-card" >
+                                <div class="position-relative" @onclick="() => NavigateToUser(forecast.AppUser.UserName)">
                                 <img src="@GetImage(forecast.MainImage,(int)forecast.GenderId)"
                                      class="card-img-top user-image"
                                      alt="@forecast.AppUser.UserName"
@@ -360,7 +360,7 @@ else
                                 </div>
                             </div>
 
-                            <div class="card-body text-center">
+                                <div class="card-body text-center">
                                 <h5 class="card-title mb-1">@forecast.AppUser?.UserName</h5>
                                 <p class="card-text text-muted small mb-2">
                                     @forecast.Age, @forecast.City, @forecast.Country?.Name
