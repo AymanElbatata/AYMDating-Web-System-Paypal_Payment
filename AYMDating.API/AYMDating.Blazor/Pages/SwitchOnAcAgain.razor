@@ -364,16 +364,17 @@
     {
         try
         {
+            if (_isHuman)
+            {                           
             bool ActivateUserIsDone = await _apiServiceLogin.DoDeleteSwitchedOffUserByUserId(activationModel.Email);
             if (ActivateUserIsDone)
             {
                 Navigation.NavigateTo("/login/Congratulation, Your Account Is Switched On Again Now.");
             }
-            else
-            {
                 await ShowAlert("There is No Account Is Match!.");
             }
-
+            else
+                await ShowAlert("Wrong Captcha");
         }
         catch (Exception ex)
         {
