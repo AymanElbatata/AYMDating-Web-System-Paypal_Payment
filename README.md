@@ -1,3 +1,4 @@
+
 💖 AYM Dating – Project Specification
 🌐 1. Responsive Design
 Mobile-Friendly: Smooth browsing across devices—mobile, tablet, and desktop.
@@ -101,3 +102,8 @@ Full admin panel can be developed with extra backend/frontend work or as a custo
 📇 Connect with the Developer
 LinkedIn: Ayman Elbatata
 https://www.linkedin.com/in/ayman-elbatata/
+
+------
+I can make any update according to your needs.
+Buy This Product: https://aymanelbatata.gumroad.com/l/datingapp
+Or via this link with commercial invoice and taxes: https://checkouts.kashier.io/en/prepaymenpages?ppLink=PP-927176201,live 
