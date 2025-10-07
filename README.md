@@ -1,3 +1,4 @@
+Live Demo: https://aymdating.runasp.net
 
 💖 AYM Dating – Project Specification
 🌐 1. Responsive Design
@@ -70,9 +71,6 @@ Live Notifications
 Inspired by InternationalCupid
 
 
-Live Demo:
-
-https://aymdating.runasp.net
 
 Cross-Platform Hosting:
 
@@ -105,4 +103,3 @@ https://www.linkedin.com/in/ayman-elbatata/
 
 ------
 I can make any update according to your needs and you can buy it via https://aymanelbatata.gumroad.com/l/datingapp
-Or via the following link just if you need a commercial invoice with 14% taxes and other fees: https://checkouts.kashier.io/en/prepaymenpages?ppLink=PP-927176201,live 
