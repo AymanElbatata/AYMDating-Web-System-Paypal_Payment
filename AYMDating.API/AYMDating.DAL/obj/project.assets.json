@@ -9025,11 +9025,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ayman\\Desktop\\AYMDating.API\\AYMDating.DAL\\AYMDating.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\ayman\\Documents\\GitHub\\AYMDating-Web-System-Paypal_Payment\\AYMDating.API\\AYMDating.DAL\\AYMDating.DAL.csproj",
       "projectName": "AYMDating.DAL",
-      "projectPath": "C:\\Users\\ayman\\Desktop\\AYMDating.API\\AYMDating.DAL\\AYMDating.DAL.csproj",
+      "projectPath": "C:\\Users\\ayman\\Documents\\GitHub\\AYMDating-Web-System-Paypal_Payment\\AYMDating.API\\AYMDating.DAL\\AYMDating.DAL.csproj",
       "packagesPath": "C:\\Users\\ayman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ayman\\Desktop\\AYMDating.API\\AYMDating.DAL\\obj\\",
+      "outputPath": "C:\\Users\\ayman\\Documents\\GitHub\\AYMDating-Web-System-Paypal_Payment\\AYMDating.API\\AYMDating.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9062,7 +9062,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net6.0": {
@@ -9125,7 +9125,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pd7a3aqos3k=",
+  "dgSpecHash": "WtSSSxB3vHg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ayman\\Desktop\\AYMDating.API\\AYMDating.API\\AYMDating.API.csproj",
+  "projectFilePath": "C:\\Users\\ayman\\Documents\\GitHub\\AYMDating-Web-System-Paypal_Payment\\AYMDating.API\\AYMDating.API\\AYMDating.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ayman\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ayman\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -197,8 +197,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'PayPal 1.9.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\ayman\\Documents\\GitHub\\AYMDating-Web-System-Paypal_Payment\\AYMDating.API\\AYMDating.API\\AYMDating.API.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ayman\\Documents\\GitHub\\AYMDating-Web-System-Paypal_Payment\\AYMDating.API\\AYMDating.API\\AYMDating.API.csproj",
       "libraryId": "PayPal",
       "targetGraphs": [
         "net6.0"
